@@ -1,0 +1,56 @@
+version: "3.8"
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./db/mysql:/var/lib/mysql
+    ports: 
+      - 3306:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "wsh28cmk"
+      MYSQL_DATABASE: "wp_db"
+      MYSQL_USER: "saytan"
+      MYSQL_PASSWORD: "wsh28cmk"
+
+  wordpress:
+    image: wordpress:latest
+    build: ./
+    working_dir: /var/www/html
+    volumes:
+      - ./wordpress/html:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./themes:/var/www/html/wp-content/themes
+      - ./plugins:/var/www/html/wp-content/plugins
+      - ./wp-install.sh:/tmp/wp-install.sh
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8080:80
+    environment:
+      TZ: "Asia/Tokyo"
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wp_db
+      WORDPRESS_DB_USER: saytan
+      WORDPRESS_DB_PASSWORD: wsh28cmk
+      WORDPRESS_DEBUG: 1
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=wsh28cmk
+    ports:
+      - 8888:80
+
+volumes:
+  mysql_data:
+  wordpress_data:
