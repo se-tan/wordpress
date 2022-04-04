@@ -14,9 +14,9 @@ if ( !defined( 'ABSPATH' ) ) exit; ?>
       <div id="header-in" class="header-in wrap cf" itemscope itemtype="https://schema.org/WebSite">
 
         <?php //キャッチフレーズがヘッダー上部のとき
-        if (is_tagline_position_header_top()) {
-           get_template_part('tmp/header-tagline');
-        } ?>
+//         if (is_tagline_position_header_top()) {
+//            get_template_part('tmp/header-tagline');
+//         } ?>
 
         <?php //ロゴ前にコードを挿入するためのアクションフック
         do_action( 'wp_header_logo_before_open' ); ?>

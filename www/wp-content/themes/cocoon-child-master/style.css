@@ -10,25 +10,46 @@ Template:   cocoon-master
 Version:    1.1.3
 */
 
-/************************************
-** 子テーマ用のスタイルを書く
-************************************/
-/*必要ならばここにコードを書く*/
+/* =================================
+* GTranslate
+* ================================== */
+#gtranslate_selector {
+	font-size: 0.9rem;
+	padding: 7px;
+	width: 90%;
+}
 
-/************************************
-** レスポンシブデザイン用のメディアクエリ
-************************************/
-/*1023px以下*/
+/* =================================
+* レスポンシブ用メディアクエリ
+* ================================== */
+/* 1023px以下 */
 @media screen and (max-width: 1023px){
   /*必要ならばここにコードを書く*/
 }
 
-/*834px以下*/
+/* 834px以下 */
 @media screen and (max-width: 834px){
-  /*必要ならばここにコードを書く*/
+	.sns-share-buttons,
+	.sns-follow-buttons {
+		justify-content: start;
+	}
+
+	.sns-share-message,
+	.sns-follow-message {
+		text-align: start;
+	}
+	#gtranslate_selector {
+		font-size: 0.8rem;
+		margin-top: 10px;
+		padding: 10px;
+		width: 55%;
+	}
 }
 
-/*480px以下*/
+/* 480px以下 */
 @media screen and (max-width: 480px){
-  /*必要ならばここにコードを書く*/
+	.sns-share-buttons {
+		margin-top: 3%;
+		justify-content: flex-start;
+	}
 }

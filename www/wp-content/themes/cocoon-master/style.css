@@ -1131,6 +1131,7 @@ img.emoji {
 
 .sns-buttons {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .sns-buttons a {
@@ -1139,8 +1140,8 @@ img.emoji {
   text-align: center;
   color: #fff;
   text-decoration: none;
-  border-radius: 4px;
-  height: 45px;
+  border-radius: 50%;
+  height: 40px;
 }
 .sns-buttons a:hover {
   opacity: 0.7;
@@ -1339,9 +1340,6 @@ img.emoji {
 .sns-share.ss-col-5 a {
   width: 19%;
 }
-.sns-share.ss-col-6 a {
-  width: 16%;
-}
 .sns-share.ss-high-and-low-lc a, .sns-share.ss-high-and-low-cl a {
   display: flex;
   align-content: center;
@@ -1371,12 +1369,12 @@ img.emoji {
 
 .sns-share-buttons {
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
 }
 .sns-share-buttons a {
-  width: 32%;
-  margin-bottom: 8px;
+  width: 40px;
+  margin: 0 1% 8px 0;
   font-size: 18px;
   display: inline-flex;
   align-content: center;
@@ -5899,10 +5897,10 @@ figcaption {
 ** SNSフォローボタン
 ************************************/
 .sns-follow-buttons a {
-  width: 100%;
+  width: 40px;
   margin-right: 8px;
   margin-bottom: 8px;
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -10365,18 +10363,14 @@ _:-ms-lang(x), .mc-circle {
     margin-left: 4px;
   }
 
-  .sns-share.ss-top.ss-col-6 a,
+  /* .sns-share.ss-top.ss-col-6 a,
   .sns-share.ss-bottom.ss-col-6 a {
     width: 32%;
-  }
+  } */
 
   .sns-follow-buttons {
     flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  .sns-follow-buttons a {
-    margin-right: 0;
-    width: 48%;
+    justify-content: center;
   }
 
   /************************************
