@@ -11,45 +11,170 @@ Version:    1.1.3
 */
 
 /* =================================
+* 共通
+* ================================== */
+.search-edit, input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  width: auto;
+}
+input[type='submit'],
+#bbp_reply_submit,
+.bp-login-widget-register-link a {
+  border-radius: 4px;
+  background-color: #262626;
+  color: #f3f3f3;
+  width: auto;
+}
+input[type='submit']:hover {
+  opacity: 0.6;
+}
+
+/* =================================
 * GTranslate
 * ================================== */
 #gtranslate_selector {
-	font-size: 0.9rem;
-	padding: 7px;
-	width: 90%;
+  font-size: 0.9rem;
+  padding: 7px;
+  width: 90%;
+}
+
+/* =================================
+* カテゴリー、タグ
+* ================================== */
+/* カテゴリー */
+.cat-link {
+  border-radius: 15px;
+}
+/* タグ */
+.tag-link,
+.comment-reply-link {
+  border-radius: 15px;
+  background-color: #954e2a;
+  color: aliceblue;
+}
+.tag-link:hover,
+.comment-reply-link:hover {
+  background-color: aliceblue;
+  transition: all 0.3s ease-in-out;
+  color: #954e2a;
+}
+
+/* =================================
+* アーカイブ カテゴリー 目次
+* ================================== */
+.cat-item {
+  padding-left: 10px;
+  border-bottom: 1px dotted rgba(125, 125, 125, 0.2);
+}
+.widget_archive ul li,
+.toc-list li {
+  list-style: none;
+  border-bottom: 1px dotted rgba(125, 125, 125, 0.2);
+}
+.toc .toc-list ul, 
+.toc .toc-list ol {
+	padding-left: 0;
+}
+.cat-item a,
+.widget_archive ul li a {
+  font-size: 0.95rem;
+}
+.widget_archive ul li a {
+  padding-left: 12px;
+}
+.cat-item a .post-count,
+.widget_archive ul li a .post-count {
+  border: 1px solid rgba(201, 201, 201, 0.867);
+  border-radius: 5px;
+  font-size: 0.8em;
+  padding: 1px 10px;
+}
+.cat-item a:before,
+.widget_archive ul li a:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f138";
+  color: #954e2a;
+  margin-right: 6px;
+  font-weight: bold;
+}
+.children .cat-item a:before,
+.toc-list li:before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f105";
+	color: #954e2a;
+	margin-right: 6px;
+	font-weight: bold;
+}
+.cat-item a:hover,
+.widget_archive ul li a:hover {
+  background: transparent;
+  margin-left: 5px;
+  background-color: #efefef;
+}
+.cat-item a:hover .post-count,
+.widget_archive ul li a:hover .post-count {
+  border-color: #954e2a;
+  background: #954e2a;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.footer {
+	color: #262626;
+}
+.tagcloud a {
+	border-radius: 15px;
+    background: #f3f3f3;
+    font-weight: bold;
+    flex: 0 1 auto;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1), 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.tagcloud a:hover {
+	box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
 }
 
 /* =================================
 * レスポンシブ用メディアクエリ
 * ================================== */
 /* 1023px以下 */
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1023px) {
   /*必要ならばここにコードを書く*/
 }
 
 /* 834px以下 */
-@media screen and (max-width: 834px){
-	.sns-share-buttons,
-	.sns-follow-buttons {
-		justify-content: start;
-	}
+@media screen and (max-width: 834px) {
+  .sns-share-buttons,
+  .sns-follow-buttons {
+    justify-content: start;
+  }
 
-	.sns-share-message,
-	.sns-follow-message {
-		text-align: start;
-	}
-	#gtranslate_selector {
-		font-size: 0.8rem;
-		margin-top: 10px;
-		padding: 10px;
-		width: 55%;
-	}
+  .sns-share-message,
+  .sns-follow-message {
+    text-align: start;
+  }
+  #gtranslate_selector {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    padding: 10px;
+    width: 55%;
+  }
 }
 
 /* 480px以下 */
-@media screen and (max-width: 480px){
-	.sns-share-buttons {
-		margin-top: 3%;
-		justify-content: flex-start;
-	}
+@media screen and (max-width: 480px) {
+  .sns-share-buttons {
+    margin-top: 3%;
+    justify-content: flex-start;
+  }
 }

@@ -82,3 +82,4 @@ get_template_part('tmp-user/head-insert'); ?>
 get_template_part('tmp/body-top'); ?>
 
 <!-- <?php var_dump(is_singular('news')); ?> -->
+ 
