@@ -7,16 +7,11 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 // パスワード保護ページの「保護中:」を消す
 add_filter('protected_title_format', 'remove_protected');
-function remove_protected($title) {
-       return '%s';
-}
+function remove_protected($title) { return '%s'; }
 
 // Cookieを削除して毎回パスワード要求
 add_action('after_setup_theme', 'my_after_setup_theme' );
-function my_after_setup_theme(){
-setcookie('wp-postpass_' . COOKIEHASH, $_POST['post_password'], 0, COOKIEPATH);
-};
-
+function my_after_setup_theme() { setcookie('wp-postpass_' . COOKIEHASH, $_POST['post_password'], 0, COOKIEPATH); };
 
 //子テーマ用のビジュアルエディタースタイルを適用
 add_editor_style();
