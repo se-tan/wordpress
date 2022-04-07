@@ -49,6 +49,29 @@ input[type="submit"]:hover {
 .sub-caption {
   display: none;
 }
+
+/* カテゴリー */
+.cat-link {
+  border-radius: 15px;
+}
+.cat-link:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+/* タグ */
+.tag-link,
+.comment-reply-link {
+  border-radius: 15px;
+  background-color: #954e2a;
+  color: aliceblue;
+}
+.tag-link:hover,
+.comment-reply-link:hover {
+  background-color: aliceblue;
+  transition: all 0.3s ease-in-out;
+  color: #954e2a;
+}
+/* この記事を書いた人 */
 .author-box .author-name a {
 	text-decoration: none;
 }
@@ -131,19 +154,6 @@ li a, li .cf {
   color: #fff;
   transition: 0.4s;
 }
-/* タグ */
-.tag-link,
-.comment-reply-link {
-  border-radius: 15px;
-  background-color: #954e2a;
-  color: aliceblue;
-}
-.tag-link:hover,
-.comment-reply-link:hover {
-  background-color: aliceblue;
-  transition: all 0.3s ease-in-out;
-  color: #954e2a;
-}
 
 /* =================================
 *  ウィジェット サイドバースクロール追従
@@ -194,8 +204,7 @@ li a, li .cf {
   letter-spacing: 0.5px;
   padding-bottom: .5em;
 }
-.sidebar-scroll .toc-list>li>a:hover,
-.sidebar-scroll .toc-list>li>ul>li>a:hover {
+.sidebar-scroll .toc-list li a:hover {
   margin-left: 5px;
   transition: 0.4s;
   text-decoration: none;
@@ -246,7 +255,7 @@ li a, li .cf {
 }
 
 /* =================================
-*  フッター
+*  ウィジェット フッター
 * ================================== */
 .footer {
   color: #262626;
